@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --primary-bg: 237 76% 64%;
+  --primary-fg: 0 0% 100%;
+}
