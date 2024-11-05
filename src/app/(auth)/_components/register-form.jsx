@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Button from "@/components/button";
+import { redirect } from "next/navigation";
 
 const RegisterForm = () => {
   const [formData, setFormData] = useState({
@@ -16,8 +17,8 @@ const RegisterForm = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
     // Register logic coming soon
+    redirect("/login");
   };
 
   return (
