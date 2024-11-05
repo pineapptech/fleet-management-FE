@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import esgLogo from "../_images/esg-logo.png";
-import RegisterForm from "./register-form";
+import RegisterForm from "../_components/register-form";
 
 const Register = () => {
   return (

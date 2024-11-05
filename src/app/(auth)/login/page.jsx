@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import esgLogo from "../_images/esg-logo.png";
-import LoginForm from "./login-form";
+import LoginForm from "../_components/login-form";
 
 const Login = () => {
   return (
