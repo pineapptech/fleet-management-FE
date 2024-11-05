@@ -23,7 +23,7 @@ const Login = () => {
           You don't have an account?
           <Link
             href="/register"
-            className="font-bold hover:underline text-primary-bg"
+            className="font-bold hover:underline text-[#115931]"
           >
             {" "}
             Register Account

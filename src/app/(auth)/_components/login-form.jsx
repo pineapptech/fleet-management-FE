@@ -51,11 +51,11 @@ const LoginForm = () => {
         />
         <Link
           href="/forgot-password"
-          className="self-end font-normal hover:underline text-primary-bg"
+          className="self-end font-normal hover:underline text-[#115931]"
         >
           Forgot password?
         </Link>
-        <Button type="submit" variant="primary" className="bg-[#115931]">
+        <Button type="submit" className="bg-[#115931] text-white">
           Sign In
         </Button>
       </div>

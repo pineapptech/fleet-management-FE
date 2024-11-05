@@ -19,13 +19,13 @@ const Register = () => {
         </h1>
         <RegisterForm />
         <p className="register-link font-light mt-auto self-center">
-          You don't have an account?
+          Already have an account?
           <Link
-            href="/register"
-            className="font-bold hover:underline text-primary-bg"
+            href="/login"
+            className="font-bold hover:underline text-[#115931]"
           >
             {" "}
-            Register Account
+            Login
           </Link>
         </p>
       </main>

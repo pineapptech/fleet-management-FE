@@ -66,12 +66,12 @@ const RegisterForm = () => {
         />
         <Link
           href="/forgot-password"
-          className="self-end font-normal hover:underline text-primary-bg"
+          className="self-end mb-2 font-normal hover:underline text-[#115931]"
         >
           Forgot password?
         </Link>
       </div>
-      <Button type="submit" variant="primary" className="bg-[#115931] w-full">
+      <Button type="submit" className="bg-[#115931] text-white w-full">
         Register
       </Button>
     </form>
