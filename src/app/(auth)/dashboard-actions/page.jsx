@@ -7,32 +7,32 @@ const actions = [
   {
     title: "Dashboard",
     image: "/images/dashboard-actions/dashboard-card.png",
-    href: "#",
+    href: "/dashboard/home",
   },
   {
     title: "Fleet Inventory",
     image: "/images/dashboard-actions/fleet-allocation-card.png",
-    href: "#",
+    href: "/dashboard/fleet-inventory",
   },
   {
     title: "Fleet Allocation",
     image: "/images/dashboard-actions/fleet-inventory-card.png",
-    href: "#",
+    href: "/dashboard/fleet-allocation",
   },
   {
     title: "Fleet Maintainance",
     image: "/images/dashboard-actions/fleet-maintainance-card.png",
-    href: "#",
+    href: "/dashboard/fleet-maintainance",
   },
   {
     title: "Fleet Procurement",
     image: "/images/dashboard-actions/fleet-procurement-card.png",
-    href: "#",
+    href: "dashboard/fleet-procurement",
   },
   {
     title: "Settings",
     image: "/images/dashboard-actions/settings-card.png",
-    href: "#",
+    href: "/dashboard/settings",
   },
 ];
 

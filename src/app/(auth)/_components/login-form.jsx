@@ -17,7 +17,7 @@ const LoginForm = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     // Login logic coming soon
-    redirect("/dashboard-actions");
+    redirect("/dashboard");
   };
 
   return (
@@ -32,7 +32,7 @@ const LoginForm = () => {
           id="email"
           onChange={handleFormDataChange}
           value={formData.email}
-          className="w-full p-1 border-b outline-[#115931] border-[#115931] bg-gray-50 rounded-t-lg"
+          className="w-full p-1 border-b outline-none border-[#115931] bg-gray-50 rounded-t-lg"
           required
         />
       </div>
@@ -46,11 +46,11 @@ const LoginForm = () => {
           id="password"
           onChange={handleFormDataChange}
           value={formData.password}
-          className="w-full p-1 border-b outline-[#115931] border-[#115931] bg-gray-50 rounded-t-lg"
+          className="w-full p-1 border-b outline-none border-[#115931] bg-gray-50 rounded-t-lg"
           required
         />
         <Link
-          href="/forgot-password"
+          href="/#"
           className="self-end font-normal hover:underline text-[#115931]"
         >
           Forgot password?

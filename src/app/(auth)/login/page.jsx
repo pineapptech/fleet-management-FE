@@ -20,16 +20,6 @@ const Login = () => {
           Login
         </h1>
         <LoginForm />
-        <p className="register-link font-light mt-auto self-center">
-          You don't have an account?
-          <Link
-            href="/register"
-            className="font-bold hover:underline text-[#115931]"
-          >
-            {" "}
-            Register Account
-          </Link>
-        </p>
       </main>
     </div>
   );
