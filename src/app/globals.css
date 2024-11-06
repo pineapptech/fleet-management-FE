@@ -5,4 +5,6 @@
 :root {
   --primary-bg: 237 76% 64%;
   --primary-fg: 0 0% 100%;
+  --background: 0 0% 6%;
+  --foreground: 0 0% 100%;
 }
