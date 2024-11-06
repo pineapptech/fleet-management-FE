@@ -16,7 +16,7 @@ import SettingsIcon from "@/icons/settings";
 const links = [
   {
     name: "Dashboard",
-    href: "/dashboard",
+    href: "/dashboard/home",
     icon: <WindowIcon className="" />,
   },
   {
