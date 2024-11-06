@@ -1,10 +1,10 @@
 import React from "react";
 
 const Button = React.forwardRef(
-  ({ children, className, variant, ...props }, ref) => {
+  ({ children, className, variant = "primary", ...props }, ref) => {
     const variantStyles = {
       primary: "bg-primary text-foreground",
-      outline: "border-primary text-primary",
+      outline: "border-2 border-primary text-primary",
     };
 
     return (
