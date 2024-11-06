@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import esgLogo from "../_images/esg-logo.png";
 import RegisterForm from "../_components/register-form";
 
 const Register = () => {
@@ -8,7 +7,9 @@ const Register = () => {
     <div className="flex justify-center items-center min-h-screen bg-[url(/images/login-bg.svg)] bg-[#11894E]/15 bg-contain">
       <main className="p-12 bg-white rounded-lg pb-8 flex flex-col items-center gap-4 font-light">
         <Image
-          src={esgLogo}
+          src="images/esg-logo.png"
+          width={154}
+          height={154}
           alt="Enugu State Government Logo"
           className="w-24 h-24"
         />

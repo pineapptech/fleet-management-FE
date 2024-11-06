@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import esgLogo from "../_images/esg-logo.png";
 import LoginForm from "../_components/login-form";
 
 const Login = () => {
@@ -9,7 +8,9 @@ const Login = () => {
       <div className="img-area w-1/2 bg-[url(/images/login-bg.svg)] bg-[#11894E]/15 bg-cover"></div>
       <main className="p-12 pb-8 w-1/2 flex flex-col items-center gap-4 font-light">
         <Image
-          src={esgLogo}
+          src="/images/esg-logo.png"
+          width={154}
+          height={154}
           alt="Enugu State Government Logo"
           className="w-24 h-24"
         />

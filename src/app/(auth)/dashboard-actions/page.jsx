@@ -3,20 +3,37 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import dashboardImage from "../_images/dashboard-card.png";
-import fleetAllocationImage from "../_images/fleet-allocation-card.png";
-import fleetInventoryImage from "../_images/fleet-inventory-card.png";
-import fleetMaintainanceImage from "../_images/fleet-maintainance-card.png";
-import fleetProcurementImage from "../_images/fleet-procurement-card.png";
-import settingsImage from "../_images/settings-card.png";
-
 const actions = [
-  { title: "Dashboard", image: dashboardImage, href: "#" },
-  { title: "Fleet Inventory", image: fleetInventoryImage, href: "#" },
-  { title: "Fleet Allocation", image: fleetAllocationImage, href: "#" },
-  { title: "Fleet Maintainance", image: fleetMaintainanceImage, href: "#" },
-  { title: "Fleet Procurement", image: fleetProcurementImage, href: "#" },
-  { title: "Settings", image: settingsImage, href: "#" },
+  {
+    title: "Dashboard",
+    image: "/images/dashboard-actions/dashboard-card.png",
+    href: "#",
+  },
+  {
+    title: "Fleet Inventory",
+    image: "/images/dashboard-actions/fleet-allocation-card.png",
+    href: "#",
+  },
+  {
+    title: "Fleet Allocation",
+    image: "/images/dashboard-actions/fleet-inventory-card.png",
+    href: "#",
+  },
+  {
+    title: "Fleet Maintainance",
+    image: "/images/dashboard-actions/fleet-maintainance-card.png",
+    href: "#",
+  },
+  {
+    title: "Fleet Procurement",
+    image: "/images/dashboard-actions/fleet-procurement-card.png",
+    href: "#",
+  },
+  {
+    title: "Settings",
+    image: "/images/dashboard-actions/settings-card.png",
+    href: "#",
+  },
 ];
 
 const DashboardActions = () => {
@@ -25,11 +42,19 @@ const DashboardActions = () => {
       <div className="py-40 px-4 rounded-md border border-white bg-gradient-to-br from-[#FFFFFF73] to-[#75FFD100]">
         <div className="action-wrapper flex flex-wrap gap-6">
           {actions.map(({ title, image, href }) => (
-            <Link href={href} key={title + href}>
-              <div className="card bg-white basis-0 grow p-4 flex flex-col gap-2 justify-between items-center rounded-md">
-                <Image src={image} alt={title} className="w-20 h-20" />
-                <h2 className="font-bold text-center">{title}</h2>
-              </div>
+            <Link
+              href={href}
+              key={title + href}
+              className="action-card w-36 bg-white basis-0 grow p-4 flex flex-col gap-2 justify-between items-center rounded-md hover:scale-105 active:scale-100 transition-transform"
+            >
+              <Image
+                src={image}
+                width={72.64}
+                height={72.64}
+                alt={title}
+                className="w-20 h-20"
+              />
+              <h2 className="font-bold text-center">{title}</h2>
             </Link>
           ))}
         </div>

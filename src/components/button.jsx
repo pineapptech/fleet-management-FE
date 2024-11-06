@@ -9,7 +9,7 @@ const Button = React.forwardRef(
 
     return (
       <button
-        className={`inline-block px-4 py-2 rounded-md hover:scale-105 active:scale-95 transition-transform ${variantStyles[variant]} ${className}`}
+        className={`inline-block px-4 py-2 rounded-md hover:scale-105 active:scale-100 transition-transform ${variantStyles[variant]} ${className}`}
         {...props}
       >
         {children}
