@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         "primary-bg": "hsl(var(--primary-bg))",
         "primary-fg": "hsl(var(--primary-fg))",
+        secondary: "hsl(var(--secondary))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
       },
