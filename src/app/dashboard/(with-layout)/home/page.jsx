@@ -1,7 +1,8 @@
 import React from "react";
+import Button from "@/components/button";
 import Greeting from "../_components/greeting";
 import RealTimeInfo from "../_components/real-time-info";
-import Button from "@/components/button";
+import VehicleSummary from "./vehicle-summary";
 
 const DashboardHome = () => {
   return (
@@ -11,6 +12,8 @@ const DashboardHome = () => {
         <RealTimeInfo />
         <Button variant="outline">Add/Document New Vehicle</Button>
       </div>
+
+      <VehicleSummary />
     </div>
   );
 };
