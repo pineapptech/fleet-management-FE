@@ -22,7 +22,7 @@ const DoorExitIcon = ({ className }) => {
         strokeWidth="3.33333"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="text-primary-bg"
+        className="text-primary"
       />
     </svg>
   );

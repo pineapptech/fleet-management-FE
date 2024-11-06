@@ -64,7 +64,7 @@ const SideNav = ({ className }) => {
               href={href}
               className={`group relative flex items-center gap-2 px-3 py-2 my-1 rounded-s-3xl transition-colors ${
                 pathname == href
-                  ? "bg-foreground text-primary-bg"
+                  ? "bg-foreground text-primary"
                   : "hover:bg-foreground/80 hover:text-background"
               }`}
             >

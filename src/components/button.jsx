@@ -3,8 +3,8 @@ import React from "react";
 const Button = React.forwardRef(
   ({ children, className, variant, ...props }, ref) => {
     const variantStyles = {
-      primary: "bg-primary-bg text-primary-fg",
-      outline: "border-primary-bg text-primary-bg",
+      primary: "bg-primary text-foreground",
+      outline: "border-primary text-primary",
     };
 
     return (
