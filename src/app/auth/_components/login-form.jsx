@@ -50,7 +50,7 @@ const LoginForm = () => {
           required
         />
         <Link
-          href="/#"
+          href="#"
           className="self-end font-normal hover:underline text-[#115931]"
         >
           Forgot password?

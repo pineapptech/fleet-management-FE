@@ -49,8 +49,6 @@ const links = [
 const SideNav = ({ className }) => {
   const pathname = usePathname();
 
-  console.log(pathname);
-
   return (
     <nav className={className}>
       <ProfileCard />

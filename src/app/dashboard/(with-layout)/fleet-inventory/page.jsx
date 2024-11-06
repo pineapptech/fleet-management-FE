@@ -1,7 +1,7 @@
 import React from "react";
 
 const FleetInventory = () => {
-  return <div></div>;
+  return <div>yeahhh</div>;
 };
 
 export default FleetInventory;
