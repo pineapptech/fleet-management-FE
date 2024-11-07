@@ -77,7 +77,6 @@ const TripTable = () => {
               className="accent-primary"
             />
           </th>
-          {/* <th className="w-fit p-2">&nbsp;</th> */}
           <th className="w-[20%]">Driver</th>
           <th className="w-[10%]">Car Type</th>
           <th className="w-[15%]">Ordered Time</th>
@@ -98,8 +97,6 @@ const TripTable = () => {
                   className="accent-primary"
                 />
               </td>
-              {/* <td>
-              </td> */}
               <td className="text-center flex justify-center items-center flex-wrap">
                 <UserIcon className="border-2 border-black rounded-full w-8 h-8 m-2" />
                 <div className="info">

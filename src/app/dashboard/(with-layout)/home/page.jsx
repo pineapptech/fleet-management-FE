@@ -13,7 +13,7 @@ const DashboardHome = () => {
   return (
     <div>
       <Greeting />
-      <div className="flex justify-between items-center my-4">
+      <div className="flex justify-between items-center flex-wrap gap-2 my-4">
         <RealTimeInfo />
         <Button variant="outline">Add/Document New Vehicle</Button>
       </div>

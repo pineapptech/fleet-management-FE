@@ -7,7 +7,7 @@ const RealTimeInfo = ({ title = "Real Time Data" }) => {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
-    const timerId = setTimeout(() => setDate(new Date()), 60 * 1000);
+    const timerId = setTimeout(() => setDate(new Date()), 30 * 1000);
 
     return () => clearTimeout(timerId);
   });
@@ -16,7 +16,9 @@ const RealTimeInfo = ({ title = "Real Time Data" }) => {
 
   return (
     <div className="flex items-baseline gap-4 my-4 text-secondary text-sm">
-      <h2 className="capitalize font-extrabold text-xl">{title}</h2>
+      <h2 className="capitalize font-extrabold text-xl whitespace-nowrap">
+        {title}
+      </h2>
       <div className="date flex items-start gap-1.5">
         <CalendarIcon />
         <span>
