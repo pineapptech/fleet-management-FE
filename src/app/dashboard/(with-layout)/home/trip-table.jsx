@@ -68,7 +68,7 @@ const TripTable = () => {
   return (
     <table className="table-fixed w-full">
       <thead>
-        <tr className="ring-2 ring-gray-200 bg-gray-100 rounded-xl *:py-1">
+        <tr className="ring-2 ring-gray-200 ring-offset-4 ring-offset-gray-100 bg-gray-100 rounded-xl *:py-1">
           <th className="w-fit pl-1">
             <input
               type="checkbox"

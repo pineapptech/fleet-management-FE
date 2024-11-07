@@ -7,7 +7,7 @@ import React from "react";
 
 const TableFilter = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 mb-8">
       <label
         htmlFor="search"
         className="search border-2 grow border-gray-300 rounded-md flex items-center gap-1 w-fit p-2 bg-gray-50 has-[:focus]:border-gray-500"
@@ -31,8 +31,9 @@ const TableFilter = () => {
           name="filter"
           id="filter"
           className="p-2 appearance-none bg-transparent outline-none cursor-pointer"
+          defaultValue="none"
         >
-          <option value="none" disabled selected>
+          <option value="none" disabled>
             Filter by
           </option>
 
