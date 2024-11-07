@@ -42,9 +42,9 @@ const tripMockData = [
   },
 ];
 
-const LastTrips = () => {
+const TripExpenses = ({ className }) => {
   return (
-    <div className="p-4 w-fit rounded-xl bg-neutral-100 flex flex-col">
+    <div className={"p-4 rounded-xl bg-neutral-100 flex flex-col " + className}>
       <h3 className="text-lg mb-2">Trip Expenses</h3>
 
       {tripMockData.map((trip) => {
@@ -60,7 +60,7 @@ const LastTrips = () => {
               {trip.tag || "Untagged"}
             </div>
 
-            <div className="trip-info flex items-start gap-2 text-sm whitespace-nowrap">
+            <div className="trip-info flex items-start gap-2 text-xs whitespace-nowrap">
               {trip.status == "repair" ? (
                 <RepairToolIcon className="w-4 h-4 text-gray-500" />
               ) : (
@@ -89,4 +89,4 @@ const LastTrips = () => {
   );
 };
 
-export default LastTrips;
+export default TripExpenses;

@@ -33,11 +33,11 @@ const tripMockData = [
   },
 ];
 
-const LastTrips = () => {
+const LastTrips = ({ className }) => {
   const padDate = (num) => (String(num).length < 2 ? "0" + num : num);
 
   return (
-    <div className="p-4 w-fit rounded-xl bg-neutral-100 flex flex-col">
+    <div className={"p-4 rounded-xl bg-neutral-100 flex flex-col " + className}>
       <h3 className="text-lg mb-2">Last Trips</h3>
 
       {tripMockData.map((trip) => {
@@ -56,7 +56,7 @@ const LastTrips = () => {
               {trip.tag || "Untagged"}
             </div>
 
-            <div className="timeline-wrapper text-sm flex gap-2 *:flex *:flex-col *:justify-between whitespace-nowrap">
+            <div className="timeline-wrapper text-xs flex gap-2 *:flex *:flex-col *:justify-between whitespace-nowrap">
               <svg
                 width="11"
                 height="42"
