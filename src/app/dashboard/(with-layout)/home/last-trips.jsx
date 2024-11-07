@@ -37,7 +37,7 @@ const LastTrips = () => {
   const padDate = (num) => (String(num).length < 2 ? "0" + num : num);
 
   return (
-    <div className="w-fit p-4 rounded-xl bg-neutral-100">
+    <div className="p-4 w-fit rounded-xl bg-neutral-100 flex flex-col">
       <h3 className="text-lg mb-2">Last Trips</h3>
 
       {tripMockData.map((trip) => {
@@ -45,7 +45,7 @@ const LastTrips = () => {
         const toTime = new Date(trip.toDate);
 
         return (
-          <div className="trip w-fit pl-4 mb-2 border-t-2 border-black">
+          <div className="trip pl-4 mb-2 border-t-2 border-black">
             <div
               className={`tag w-fit py-1 px-2 mb-4 text-xs text-white capitalize ml-auto rounded-b-lg ${
                 trip.tag
@@ -56,7 +56,7 @@ const LastTrips = () => {
               {trip.tag || "Untagged"}
             </div>
 
-            <div className="timeline-wrapper w-fit text-sm flex gap-2 *:flex *:flex-col *:justify-between whitespace-nowrap">
+            <div className="timeline-wrapper text-sm flex gap-2 *:flex *:flex-col *:justify-between whitespace-nowrap">
               <svg
                 width="11"
                 height="42"
@@ -97,11 +97,11 @@ const LastTrips = () => {
                 />
               </svg>
               <div className="dates font-bold">
-                <time datetime={trip.fromDate}>
+                <time dateTime={trip.fromDate}>
                   {padDate(fromTime.getHours())}:
                   {padDate(fromTime.getMinutes())}
                 </time>
-                <time datetime={trip.toDate}>
+                <time dateTime={trip.toDate}>
                   {padDate(toTime.getHours())}:{padDate(toTime.getMinutes())}
                 </time>
               </div>
@@ -109,9 +109,9 @@ const LastTrips = () => {
                 <address>{trip.fromAddress}</address>
                 <address>{trip.toAddress}</address>
               </div>
-              <div className="icons">
-                <CarIcon className="w-4 h-4" />
-                <SCurveIcon className="w-4 h-4 mb-1" />
+              <div className="icons ml-auto">
+                <CarIcon className="w-4 h-4 text-gray-500" />
+                <SCurveIcon className="w-4 h-4 text-gray-500 mb-1" />
               </div>
               <div className="travel-detail">
                 <p className="car-name">{trip.carName}</p>
@@ -122,11 +122,12 @@ const LastTrips = () => {
         );
       })}
 
+      <hr className="bg-black h-[3px] mb-4" />
       <Link
         href="#"
-        className="mt-4 font-bold text-xs text-orange-400 hover:underline"
+        className="mt-auto font-bold text-xs text-orange-400 hover:underline"
       >
-        Show all expenses{" "}
+        Show all trips{" "}
         <ChevronRightIcon className="inline-block ml-2 text-black" />{" "}
       </Link>
     </div>

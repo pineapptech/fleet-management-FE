@@ -4,6 +4,7 @@ import Greeting from "../_components/greeting";
 import RealTimeInfo from "../_components/real-time-info";
 import VehicleSummary from "./vehicle-summary";
 import LastTrips from "./last-trips";
+import TripExpenses from "./trip-expenses";
 
 const DashboardHome = () => {
   return (
@@ -15,7 +16,11 @@ const DashboardHome = () => {
       </div>
 
       <VehicleSummary />
-      <LastTrips />
+      <div className="trips-summary flex flex-wrap gap-4 justify-center">
+        <LastTrips />
+
+        <TripExpenses />
+      </div>
     </div>
   );
 };
