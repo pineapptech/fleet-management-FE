@@ -3,6 +3,7 @@ import Button from "@/components/button";
 import Greeting from "../_components/greeting";
 import RealTimeInfo from "../_components/real-time-info";
 import VehicleSummary from "./vehicle-summary";
+import LastTrips from "./last-trips";
 
 const DashboardHome = () => {
   return (
@@ -14,6 +15,7 @@ const DashboardHome = () => {
       </div>
 
       <VehicleSummary />
+      <LastTrips />
     </div>
   );
 };
