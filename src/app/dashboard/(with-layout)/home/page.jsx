@@ -3,7 +3,7 @@ import Button from "@/components/button";
 
 import Greeting from "../_components/greeting";
 import RealTimeInfo from "../_components/real-time-info";
-import VehicleSummary from "./vehicle-summary";
+import VehicleSummary from "../_components/vehicle-summary";
 import LastTrips from "./last-trips";
 import TripExpenses from "./trip-expenses";
 import TopLocations from "./top-locations";
