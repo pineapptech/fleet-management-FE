@@ -7,6 +7,7 @@ import VehicleSummary from "./vehicle-summary";
 import LastTrips from "./last-trips";
 import TripExpenses from "./trip-expenses";
 import TopLocations from "./top-locations";
+import TripTable from "./trip-table";
 
 const DashboardHome = () => {
   return (
@@ -19,11 +20,13 @@ const DashboardHome = () => {
 
       <VehicleSummary />
 
-      <div className="trips-summary flex flex-wrap gap-4 justify-center ">
+      <div className="trips-summary flex flex-wrap gap-4 justify-center mb-8">
         <LastTrips className="grow" />
         <TripExpenses className="grow" />
         <TopLocations className="grow" />
       </div>
+
+      <TripTable />
     </div>
   );
 };

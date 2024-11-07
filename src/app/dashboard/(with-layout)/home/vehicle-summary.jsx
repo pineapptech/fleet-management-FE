@@ -38,7 +38,10 @@ const VehicleSummary = () => {
   return (
     <div className="card-wrapper flex gap-4 flex-wrap justify-center mb-8">
       {vehicleSummaries.map(({ title, count, fg, bg }) => (
-        <div className={`flex items-center gap-6 p-6 rounded-md ${bg} ${fg}`}>
+        <div
+          key={title + count}
+          className={`flex items-center gap-6 p-6 rounded-md ${bg} ${fg}`}
+        >
           <FolderOpenIcon />
           <div className="info text-center text-sm">
             <p className="count font-bold mb-1">{count}</p>
