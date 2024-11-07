@@ -9,6 +9,14 @@ import VehicleTable from "./vehicle-table";
 import VehicleCards from "./vehicle-cards";
 
 const FleetInventory = () => {
+  const [filterData, setFilterData] = useState({
+    search: "",
+    filterBy: "none",
+    displayMode: "tabular",
+  });
+
+  console.log(filterData);
+
   return (
     <div>
       <Greeting />
@@ -21,9 +29,9 @@ const FleetInventory = () => {
       </div>
 
       <VehicleSummary />
-      <TableFilter />
-      <VehicleTable />
-      {/* <VehicleCards /> */}
+      <TableFilter filterData={filterData} setFilterData={setFilterData} />
+
+      {filterData.displayMode == "cards" ? <VehicleCards /> : <VehicleTable />}
     </div>
   );
 };

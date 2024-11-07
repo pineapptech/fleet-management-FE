@@ -1,11 +1,17 @@
 import {
   IconAdjustments,
+  IconBorderAll,
   IconChevronDown,
+  IconColumns,
   IconSearch,
 } from "@tabler/icons-react";
-import React from "react";
+import { useState } from "react";
 
-const TableFilter = () => {
+const TableFilter = ({ filterData, setFilterData }) => {
+  const handleFilterChange = (e) => {
+    setFilterData((fd) => ({ ...fd, [e.target.name]: e.target.value }));
+  };
+
   return (
     <div className="flex gap-4 mb-8">
       <label
@@ -18,6 +24,8 @@ const TableFilter = () => {
           name="search"
           id="search"
           placeholder="Search vehicle"
+          value={filterData.search}
+          onChange={handleFilterChange}
           className="outline-0 bg-transparent"
         />
       </label>
@@ -28,10 +36,12 @@ const TableFilter = () => {
       >
         <IconAdjustments />
         <select
-          name="filter"
+          name="filterBy"
           id="filter"
           className="p-2 appearance-none bg-transparent outline-none cursor-pointer"
           defaultValue="none"
+          value={filterData.filterBy}
+          onChange={handleFilterChange}
         >
           <option value="none" disabled>
             Filter by
@@ -46,6 +56,41 @@ const TableFilter = () => {
         </select>
         <IconChevronDown className="mr-2" />
       </label>
+
+      <div className="radio-group flex items-center justify-around">
+        <label
+          htmlFor="tabular"
+          className="bg-gray-100 p-2 cursor-pointer border rounded-s-lg has-[:checked]:border-primary"
+        >
+          <input
+            type="radio"
+            name="display-mode"
+            id="tabular"
+            onChange={(e) =>
+              setFilterData((fd) => ({ ...fd, displayMode: "tabular" }))
+            }
+            checked={filterData.displayMode == "tabular"}
+            className="peer appearance-none absolute"
+          />
+          <IconBorderAll className="peer-checked:text-primary" />
+        </label>
+        <label
+          htmlFor="cards"
+          className="bg-gray-100 p-2 cursor-pointer border rounded-e-lg has-[:checked]:border-primary"
+        >
+          <input
+            type="radio"
+            name="display-mode"
+            id="cards"
+            onChange={(e) =>
+              setFilterData((fd) => ({ ...fd, displayMode: "cards" }))
+            }
+            checked={filterData.displayMode == "cards"}
+            className="peer appearance-none absolute"
+          />
+          <IconColumns className="peer-checked:text-primary" />
+        </label>
+      </div>
     </div>
   );
 };

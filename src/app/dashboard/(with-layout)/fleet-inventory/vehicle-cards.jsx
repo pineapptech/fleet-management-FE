@@ -5,13 +5,10 @@ import Image from "next/image";
 import { IconDotsVertical } from "@tabler/icons-react";
 
 const VehicleCards = () => {
-  const { vehicleID, vehicleType, makeModel, engineNumber } =
-    vehicleMockData[0];
-
   return (
     <div className="flex justify-center gap-4 flex-wrap">
       {vehicleMockData.map((vehicle) => (
-        <div className="vehicle-card w-fit group">
+        <div key={vehicle.id} className="vehicle-card w-fit group">
           <div className="img-container relative rounded-t-md border-gray-200 border-x-8 border-t-8 h-[100px] overflow-hidden">
             <Image
               src="/images/car.jpeg"
