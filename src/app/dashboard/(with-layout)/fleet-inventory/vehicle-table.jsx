@@ -2,68 +2,7 @@ import { IconDotsVertical, IconShieldCheckFilled } from "@tabler/icons-react";
 import Image from "next/image";
 import React from "react";
 
-const vehiclesMockData = [
-  {
-    id: 1,
-    sn: "01",
-    vehicleImage: "https://example.com/images/vehicle1.png", // Placeholder URL for the vehicle image
-    vehicleID: "FMS-EN-00123",
-    vehicleType: "SUV",
-    makeModel: "Toyota Land Cruiser 2022",
-    engineNumber: "1KD-FTV-88746",
-    action: "View Details",
-  },
-  {
-    id: 2,
-    sn: "01",
-    vehicleImage: "https://example.com/images/vehicle1.png",
-    vehicleID: "FMS-EN-00123",
-    vehicleType: "SUV",
-    makeModel: "Toyota Land Cruiser 2022",
-    engineNumber: "1KD-FTV-88746",
-    action: "View Details",
-  },
-  {
-    id: 3,
-    sn: "01",
-    vehicleImage: "https://example.com/images/vehicle1.png",
-    vehicleID: "FMS-EN-00123",
-    vehicleType: "SUV",
-    makeModel: "Toyota Land Cruiser 2022",
-    engineNumber: "1KD-FTV-88746",
-    action: "View Details",
-  },
-  {
-    id: 4,
-    sn: "01",
-    vehicleImage: "https://example.com/images/vehicle1.png",
-    vehicleID: "FMS-EN-00123",
-    vehicleType: "SUV",
-    makeModel: "Toyota Land Cruiser 2022",
-    engineNumber: "1KD-FTV-88746",
-    action: "View Details",
-  },
-  {
-    id: 5,
-    sn: "01",
-    vehicleImage: "https://example.com/images/vehicle1.png",
-    vehicleID: "FMS-EN-00123",
-    vehicleType: "SUV",
-    makeModel: "Toyota Land Cruiser 2022",
-    engineNumber: "1KD-FTV-88746",
-    action: "View Details",
-  },
-  {
-    id: 6,
-    sn: "01",
-    vehicleImage: "https://example.com/images/vehicle1.png",
-    vehicleID: "FMS-EN-00123",
-    vehicleType: "SUV",
-    makeModel: "Toyota Land Cruiser 2022",
-    engineNumber: "1KD-FTV-88746",
-    action: "View Details",
-  },
-];
+import vehicleMockData from "./vehicleMockData";
 
 const VehicleTable = () => {
   return (
@@ -88,7 +27,7 @@ const VehicleTable = () => {
         </tr>
       </thead>
       <tbody>
-        {vehiclesMockData.map((vehicle, index) => {
+        {vehicleMockData.map((vehicle, index) => {
           return (
             <tr
               key={vehicle.id}
