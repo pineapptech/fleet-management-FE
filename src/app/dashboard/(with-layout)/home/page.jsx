@@ -3,7 +3,7 @@ import Button from "@/components/button";
 
 import Greeting from "../_components/greeting";
 import RealTimeInfo from "../_components/real-time-info";
-import VehicleSummary from "../_components/vehicle-summary";
+import VehicleSummary from "./vehicle-summary";
 import LastTrips from "./last-trips";
 import TripExpenses from "./trip-expenses";
 import TopLocations from "./top-locations";
@@ -13,7 +13,7 @@ const DashboardHome = () => {
   return (
     <div>
       <Greeting />
-      <div className="flex justify-between items-center flex-wrap gap-2 my-4">
+      <div className="flex justify-between items-center my-4">
         <RealTimeInfo />
         <Button variant="outline">Add/Document New Vehicle</Button>
       </div>
