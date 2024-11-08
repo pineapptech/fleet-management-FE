@@ -17,34 +17,72 @@ These links makes it easy for the user to navigate through the different pages i
 
 ## DASHBOARD
 The dashboard consists of Real-time data. Real-time data in a fleet management system refers to the immediate and continuous flow of information regarding the vehicles and assets within a fleet. This data is crucial for making timely decisions, improving efficiency, and enhancing safety. Key components of the real-time data in the fleet management system dashboard include: 
-- Add/Document New Vehicle; This is where you add or document new vehicles in the fleet management system.
+- **Add/Document New Vehicle;** This is where you add or document new vehicles in the fleet management system.
 
-- Total Vehicles; It shows the total number of vehicles that have been added in the fleet management system.
+- **Total Vehicles;** It shows the total number of vehicles that have been added in the fleet management system.
 
-- Vehicles Available; It shows the total number of vehicles that are available for use in the fleet management system.
+- **Vehicles Available;** It shows the total number of vehicles that are available for use in the fleet management system.
 
-- Vehicles Currently Active; It shows the total number of vehicles that are currently active on the road.
+- **Vehicles Currently Active;** It shows the total number of vehicles that are currently active on the road.
 
-- Vehicles with Issues; It shows the total number of vehicles that have issues.
+- **Vehicles with Issues;** It shows the total number of vehicles that have issues.
 
-- Vehicles under maintenance; It shows the total number of vehicles that are currently undregoing maintenance.
+- **Vehicles under maintenance;** It shows the total number of vehicles that are currently undregoing maintenance.
 
-- Last Trips; This section shows the last places that a vehicle went to. The vehicles are also tagged or untagged, whether it is for busisness purpose or for private purpose.
+- **Last Trips;** This section shows the last places that a vehicle went to. The vehicles are also tagged or untagged, whether it is for busisness purpose or for private purpose.
 
-- Trip expenses; It shows the amount of money spent while a vehicle was actively on the road. Expenses such as service and maintenance. Service and maintenance expenses for a car covers a range of costs associated with keeping the vehicle in good working condition and ensuring its safe operation.
+- **Trip expenses;** It shows the amount of money spent while a vehicle was actively on the road. Expenses such as service and maintenance. Service and maintenance expenses for a car covers a range of costs associated with keeping the vehicle in good working condition and ensuring its safe operation.
 
-- Top Locations; These are the key areas where vehicles in the fleet management system frequently visit.
+- **Top Locations;** These are the key areas where vehicles in the fleet management system frequently visit.
 
 The table shown in the dashboard of the fleet management system consists of the Driver, Car Type, Ordered Time, Start Location, Destination, Approved Sum.
 
-- Driver; It shows the list of drivers assigned to each active vehicles.
+- **Driver;** It shows the list of drivers assigned to each active vehicles.
 
-- Car Type; It shows the make and model of the car.
+- **Car Type;** It generally refers to the classification of vehicles based on their design, purpose, and features.
 
-- Ordered Time; It shows the date and time in which the car was requested for.
+- **Ordered Time;** It shows the date and time in which the car was requested for.
 
-- Start Location; It refers to the initial point of where a vehicle begins its journey or operation.
+- **Start Location;** It refers to the initial point of where a vehicle begins its journey or operation.
 
-- Destination; It refers to the endpoint of a vehicle's journey.
+- **Destination;** It refers to the endpoint of a vehicle's journey.
 
-- Approved Sum; It typically refers to an amount of money that has been formally authorized for the service and maintenance of each vehicle. 
+- **Approved Sum;** It typically refers to an amount of money that has been formally authorized for the service and maintenance of each vehicle.
+
+## FLEET INVENTORY
+In the fleet inventory section, it shows the list of ordered vehicles and it consists of a search bar where you can search for any vehicle of your choice as long as it is available on the fleet management system. There are two icons beside the "filter by" and it is used to toggle between viewing the list of the vehicle information in list form or in a grid form. The first icon is to show the information in a list format while the second icon is to show the information in a grid or card format. In the "fliter by", it shows a list of ways you can search for a vehicle. It includes;
+- Vehicle ID
+- Vehicle Type
+- Engine Number
+- Make/Model
+- Procurement Source 
+- Responsible Officer
+
+There is a table in the fleet inventory section that comprises of;
+- **S/N;** The serial number of each vehicle.
+
+- **Vehicle Image;** The image of each vehicle.
+
+- **Vehicle ID/Inventory ID;** It typically refers to a unique identifier assigned to a vehicle in a dealership's inventory system or database. This ID can help track the vehicle's details, history, pricing, and availability.
+
+- **Type;** It generally refers to the classification of vehicles based on their design, purpose, and features.
+
+- **Make/Model;**  "Make" refers to the manufacturer or brand of the vehicle, while "Model" refers to the specific name or designation given to a particular vehicle produced by that manufacturer.
+For example:
+**Make;** Toyota
+ **Model:** Land Cruiser.
+
+ - **Engine Number;** The engine number is a unique identifier for an engine. It can usually be found stamped or printed on the engine block, and it may vary depending on the engine type and manufacturer.
+
+ - **Action Button Details;** The action button consists of the following details;
+ 1. **View Vehicle Details;** To view the details of each vehicle.
+
+ 2. **View Vehicle History;** To view a vehicles history. Most especially for cars that have been used.
+
+ 3. **Edit Vehicle Details;** When you want to make changes to the details of a particular vehicle, you can edit the vehicle's details with this action button.
+
+ 4. **Share Vehicle Details;** To share the details of a vehicle.
+
+5. **Delete Vehicle Info;** To delete the information of a particular vehicle.
+
+
