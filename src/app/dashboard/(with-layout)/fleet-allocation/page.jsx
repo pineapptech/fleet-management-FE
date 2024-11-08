@@ -10,12 +10,7 @@ import AllocationTable from "./allocation-table";
 import AllocationCards from "./allocation-cards";
 
 const FleetAllocation = () => {
-  const [filterData, setFilterData] = useState({
-    search: "",
-    filterBy: "none",
-    displayMode: "tabular",
-  });
-
+  const [filterData, setFilterData] = useState({});
   const [allocateMode, setAllocateMode] = useState(true);
 
   return (
@@ -31,48 +26,29 @@ const FleetAllocation = () => {
 
       <VehicleSummary />
 
-      <div className="allocate-or-assign-radio-toggle flex gap-4 mb-4">
-        <label htmlFor="allocate" className="allocate grow">
-          <input
-            type="radio"
-            name="allocateOrAssign"
-            id="allocate"
-            className="appearance-none peer"
-            checked={allocateMode}
-            onChange={() => setAllocateMode(true)}
-          />
-          <Button
-            variant="outline"
-            className={`${
-              !allocateMode && "border-gray-400 text-gray-400"
-            } w-full flex justify-center gap-4`}
-            onClick={() => setAllocateMode(true)}
-          >
-            Allocate Vehicle <IconChevronDown />
-          </Button>
-        </label>
-        <label htmlFor="assign" className="assign grow">
-          <input
-            type="radio"
-            name="allocateOrAssign"
-            id="assign"
-            className="appearance-none peer"
-            checked={!allocateMode}
-            onChange={() => setAllocateMode(false)}
-          />
-          <Button
-            variant="outline"
-            className={`${
-              allocateMode && "border-gray-400 text-gray-400"
-            } w-full flex justify-center gap-4`}
-            onClick={() => setAllocateMode(false)}
-          >
-            Assign Vehicle <IconChevronDown />
-          </Button>
-        </label>
+      <div className="allocate-or-assign-wrapper flex gap-4 mb-4">
+        <Button
+          variant="outline"
+          className={`${
+            !allocateMode && "border-gray-400 text-gray-400"
+          } w-full flex justify-center gap-4`}
+          onClick={() => setAllocateMode(true)}
+        >
+          Allocate Vehicle <IconChevronDown />
+        </Button>
+
+        <Button
+          variant="outline"
+          className={`${
+            allocateMode && "border-gray-400 text-gray-400"
+          } w-full flex justify-center gap-4`}
+          onClick={() => setAllocateMode(false)}
+        >
+          Assign Vehicle <IconChevronDown />
+        </Button>
       </div>
 
-      <TableFilter filterData={filterData} setFilterData={setFilterData} />
+      <TableFilter onFilterChange={setFilterData} />
 
       <h2 className="capitalize font-extrabold text-xl text-secondary whitespace-nowrap mb-6">
         Recent Allocation

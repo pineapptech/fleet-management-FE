@@ -1,10 +1,14 @@
-import { IconDotsVertical, IconShieldCheckFilled } from "@tabler/icons-react";
+import {
+  IconAlertTriangle,
+  IconDotsVertical,
+  IconShieldCheckFilled,
+} from "@tabler/icons-react";
 import Image from "next/image";
 import React from "react";
 
-import vehicleMockData from "./vehicleMockData";
+import maintainanceMockData from "./maintainanceMockData";
 
-const VehicleTable = () => {
+const MaintainanceTable = () => {
   return (
     <table className="table-fixed w-full rounded-xl text-sm">
       <thead>
@@ -19,15 +23,17 @@ const VehicleTable = () => {
           </th>
           <th className="w-fit">SN</th>
           <th className="w-[15%]">Vehicle Image</th>
-          <th className="w-[20%]">Vehicle ID/Inventory ID</th>
+          <th className="w-[20%]">Vehicle ID</th>
           <th className="w-fit"> Type</th>
-          <th className="w-[15%]">Make/Model</th>
-          <th className="w-[20%]">Engine Number</th>
-          <th className="w-fit">Actions</th>
+          <th className="w-[10%]"> License Plate</th>
+          <th className="w-[15%]">Last Service Date</th>
+          <th className="w-[15%]">Next Service Due</th>
+          <th className="w-fit">Status</th>
+          <th className="action">&nbsp;</th>
         </tr>
       </thead>
       <tbody>
-        {vehicleMockData.map((vehicle, index) => {
+        {maintainanceMockData.map((vehicle, index) => {
           return (
             <tr
               key={vehicle.id}
@@ -41,9 +47,7 @@ const VehicleTable = () => {
                   className="accent-primary"
                 />
               </td>
-              <td className="text-center">
-                {(index < 9 ? "0" : "") + (index + 1)}
-              </td>
+              <td>{(index < 9 ? "0" : "") + (index + 1)}</td>
               <td className="text-center flex justify-center items-center flex-wrap">
                 <Image
                   src="/images/car.jpeg"
@@ -54,11 +58,26 @@ const VehicleTable = () => {
               </td>
               <td className="text-center">{vehicle.vehicleID}</td>
               <td className="text-center">{vehicle.vehicleType}</td>
-              <td>{vehicle.makeModel}</td>
-              <td className="text-center">{vehicle.engineNumber}</td>
+              <td>{vehicle.plateNumber}</td>
+              <td className="text-center">{vehicle.lastServiceDate}</td>
+              <td className="text-center">{vehicle.nextServiceDate}</td>
               <td className="text-center">
+                {vehicle.status == "ok" ? (
+                  <IconShieldCheckFilled
+                    size={18}
+                    className="text-green-400"
+                    title="OK"
+                  />
+                ) : (
+                  <IconAlertTriangle
+                    size={18}
+                    className="text-amber-400"
+                    title="This vehicle has an issue"
+                  />
+                )}
+              </td>
+              <td>
                 <button className="flex text-green-400">
-                  <IconShieldCheckFilled size={18} />
                   <IconDotsVertical size={18} />
                 </button>
               </td>
@@ -70,4 +89,4 @@ const VehicleTable = () => {
   );
 };
 
-export default VehicleTable;
+export default MaintainanceTable;

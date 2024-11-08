@@ -1,3 +1,4 @@
+import Button from "@/components/button";
 import {
   IconAdjustments,
   IconBorderAll,
@@ -7,9 +8,19 @@ import {
 } from "@tabler/icons-react";
 import { useState } from "react";
 
-const TableFilter = ({ filterData, setFilterData }) => {
+const TableFilter = ({ onFilterChange }) => {
+  const [filterData, setFilterData] = useState({
+    search: "",
+    filterBy: "none",
+    displayMode: "tabular",
+  });
+
   const handleFilterChange = (e) => {
-    setFilterData((fd) => ({ ...fd, [e.target.name]: e.target.value }));
+    const name = e.target?.name ?? e.name;
+    const value = e.target?.value ?? e.value;
+
+    setFilterData((fd) => ({ ...fd, [name]: value }));
+    onFilterChange?.({ ...filterData, [name]: value });
   };
 
   return (
@@ -57,38 +68,30 @@ const TableFilter = ({ filterData, setFilterData }) => {
       </label>
 
       <div className="radio-group flex items-center justify-around">
-        <label
-          htmlFor="tabular"
-          className="bg-gray-100 p-2 cursor-pointer border rounded-s-lg has-[:checked]:border-primary"
+        <Button
+          className={`bg-white border p-2 rounded-e-none has-[:checked]:border-primary ${
+            filterData.displayMode == "tabular"
+              ? "border-primary text-primary"
+              : "border-gray-300 text-gray-600"
+          }`}
+          onClick={() =>
+            handleFilterChange({ name: "displayMode", value: "tabular" })
+          }
         >
-          <input
-            type="radio"
-            name="display-mode"
-            id="tabular"
-            onChange={(e) =>
-              setFilterData((fd) => ({ ...fd, displayMode: "tabular" }))
-            }
-            checked={filterData.displayMode == "tabular"}
-            className="peer appearance-none absolute"
-          />
           <IconBorderAll className="peer-checked:text-primary" />
-        </label>
-        <label
-          htmlFor="cards"
-          className="bg-gray-100 p-2 cursor-pointer border rounded-e-lg has-[:checked]:border-primary"
+        </Button>
+        <Button
+          className={`bg-white border p-2 rounded-s-none has-[:checked]:border-primary ${
+            filterData.displayMode == "cards"
+              ? "border-primary text-primary"
+              : "border-gray-300 text-gray-600"
+          }`}
+          onClick={() =>
+            handleFilterChange({ name: "displayMode", value: "cards" })
+          }
         >
-          <input
-            type="radio"
-            name="display-mode"
-            id="cards"
-            onChange={(e) =>
-              setFilterData((fd) => ({ ...fd, displayMode: "cards" }))
-            }
-            checked={filterData.displayMode == "cards"}
-            className="peer appearance-none absolute"
-          />
           <IconColumns className="peer-checked:text-primary" />
-        </label>
+        </Button>
       </div>
     </div>
   );
