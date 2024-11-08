@@ -8,7 +8,7 @@ import {
 } from "@tabler/icons-react";
 import { useState } from "react";
 
-const TableFilter = ({ onFilterChange }) => {
+const TableFilter = ({ onFilterChange, showDisplayToggle = true }) => {
   const [filterData, setFilterData] = useState({
     search: "",
     filterBy: "none",
@@ -67,32 +67,34 @@ const TableFilter = ({ onFilterChange }) => {
         <IconChevronDown className="mr-2" />
       </label>
 
-      <div className="radio-group flex items-center justify-around">
-        <Button
-          className={`bg-white border p-2 rounded-e-none has-[:checked]:border-primary ${
-            filterData.displayMode == "tabular"
-              ? "border-primary text-primary"
-              : "border-gray-300 text-gray-600"
-          }`}
-          onClick={() =>
-            handleFilterChange({ name: "displayMode", value: "tabular" })
-          }
-        >
-          <IconBorderAll className="peer-checked:text-primary" />
-        </Button>
-        <Button
-          className={`bg-white border p-2 rounded-s-none has-[:checked]:border-primary ${
-            filterData.displayMode == "cards"
-              ? "border-primary text-primary"
-              : "border-gray-300 text-gray-600"
-          }`}
-          onClick={() =>
-            handleFilterChange({ name: "displayMode", value: "cards" })
-          }
-        >
-          <IconColumns className="peer-checked:text-primary" />
-        </Button>
-      </div>
+      {showDisplayToggle && (
+        <div className="radio-group flex items-center justify-around">
+          <Button
+            className={`bg-white border p-2 rounded-e-none has-[:checked]:border-primary ${
+              filterData.displayMode == "tabular"
+                ? "border-primary text-primary"
+                : "border-gray-300 text-gray-600"
+            }`}
+            onClick={() =>
+              handleFilterChange({ name: "displayMode", value: "tabular" })
+            }
+          >
+            <IconBorderAll className="peer-checked:text-primary" />
+          </Button>
+          <Button
+            className={`bg-white border p-2 rounded-s-none has-[:checked]:border-primary ${
+              filterData.displayMode == "cards"
+                ? "border-primary text-primary"
+                : "border-gray-300 text-gray-600"
+            }`}
+            onClick={() =>
+              handleFilterChange({ name: "displayMode", value: "cards" })
+            }
+          >
+            <IconColumns className="peer-checked:text-primary" />
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
