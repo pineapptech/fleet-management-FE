@@ -1,9 +1,9 @@
 import Button from "@/components/button";
 import {
   IconAdjustments,
-  IconBorderAll,
   IconChevronDown,
   IconColumns,
+  IconLayoutGrid,
   IconSearch,
 } from "@tabler/icons-react";
 import { useState } from "react";
@@ -79,7 +79,7 @@ const TableFilter = ({ onFilterChange, showDisplayToggle = true }) => {
               handleFilterChange({ name: "displayMode", value: "tabular" })
             }
           >
-            <IconBorderAll className="peer-checked:text-primary" />
+            <IconColumns className="peer-checked:text-primary" />
           </Button>
           <Button
             className={`bg-white border p-2 rounded-s-none has-[:checked]:border-primary ${
@@ -91,7 +91,7 @@ const TableFilter = ({ onFilterChange, showDisplayToggle = true }) => {
               handleFilterChange({ name: "displayMode", value: "cards" })
             }
           >
-            <IconColumns className="peer-checked:text-primary" />
+            <IconLayoutGrid className="peer-checked:text-primary" />
           </Button>
         </div>
       )}

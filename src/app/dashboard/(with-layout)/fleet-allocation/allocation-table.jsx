@@ -42,7 +42,9 @@ const AllocationTable = () => {
                   className="accent-primary"
                 />
               </td>
-              <td>{(index < 9 ? "0" : "") + (index + 1)}</td>
+              <td className="text-center">
+                {(index < 9 ? "0" : "") + (index + 1)}
+              </td>
               <td className="text-center flex justify-center items-center flex-wrap">
                 {allocation.recipientName}
               </td>

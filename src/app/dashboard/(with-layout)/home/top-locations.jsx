@@ -33,9 +33,12 @@ const TopLocations = ({ className }) => {
     <div className={"p-4 rounded-xl bg-neutral-100 flex flex-col " + className}>
       <h3 className="text-lg mb-2">Top Locations</h3>
 
-      {locationMockData.map((location) => {
+      {locationMockData.map((location, index) => {
         return (
-          <div className="trip flex items-center gap-2 text-xs whitespace-nowrap py-4 border-t-2 border-black">
+          <div
+            key={location + index}
+            className="trip flex items-center gap-2 text-xs whitespace-nowrap py-4 border-t-2 border-black"
+          >
             <div className="rank flex items-center justify-center bg-primary text-foreground w-8 h-8 rounded-full">
               {location.rank}
             </div>

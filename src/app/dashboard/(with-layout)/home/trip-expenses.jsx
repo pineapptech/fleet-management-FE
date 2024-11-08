@@ -47,9 +47,12 @@ const TripExpenses = ({ className }) => {
     <div className={"p-4 rounded-xl bg-neutral-100 flex flex-col " + className}>
       <h3 className="text-lg mb-2">Trip Expenses</h3>
 
-      {tripMockData.map((trip) => {
+      {tripMockData.map((trip, index) => {
         return (
-          <div className="trip pl-4 mb-2 border-t-2 border-black">
+          <div
+            key={trip.title + index}
+            className="trip pl-4 mb-2 border-t-2 border-black"
+          >
             <div
               className={`tag w-fit py-1 px-2 mb-4 text-xs text-white capitalize ml-auto rounded-b-lg ${
                 trip.tag
