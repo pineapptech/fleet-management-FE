@@ -85,4 +85,28 @@ For example:
 
 5. **Delete Vehicle Info;** To delete the information of a particular vehicle.
 
+## FLEET ALLOCATION
+In the fleet allocation section, it consists of the allocate vehicles button at the top which is used to allocate vehicles. On clicking on the button, the allocate vehicles form would pop up. The form must be filled before a vehicle is being allocated to the recipient. In the form requirements consists of;
+
+1. Vehicle ID
+2. Vehicle Plate Number ID
+3. Vehicle Type
+4. Vehicle Color
+5. Vehicle Make/Model
+6. Vehicle Engine Number
+7. Name of Recipient
+8. Position of government occupied by the recipient
+9. Select date of assignment
+10. Recipient Contact
+11. Recipient mode of ID with options of the Civil service ID, Voters card,  NIN, and International passport
+12. Recipient ID where you will upload the mode of Recipient ID you selected.
+13. Vehicle Status
+14. All vehicle particulars have been given to the recipient? with the options of Yes, No and Pending.
+15. Responsible Officer
+
+After filling all the necessary requirements, then click on the save and update button and a modal would pop up showing that your vehicle allocation was successful and the Vehicle ID would show in the pop up notification that it has been saved and updated. You can either cancel the pop up notification to remove the it or you can click on the back to dashboard link to take you back to the dashboard.
+
+The Fleet Allocation section also has an Assign Vehicle button where you can assign vehicles to a driver  for a specific task. When you assign a vehicle, you are actively selecting which vehicle will be used for a specific purpose.
+
+
 
