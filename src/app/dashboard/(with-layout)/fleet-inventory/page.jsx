@@ -4,7 +4,7 @@ import Greeting from "../_components/greeting";
 import RealTimeInfo from "../_components/real-time-info";
 import Button from "@/components/button";
 import VehicleSummary from "../_components/vehicle-summary";
-import TableFilter from "./table-filter";
+import TableFilter from "../_components/table-filter";
 import VehicleTable from "./vehicle-table";
 import VehicleCards from "./vehicle-cards";
 

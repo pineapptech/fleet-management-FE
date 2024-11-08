@@ -39,7 +39,6 @@ const TableFilter = ({ filterData, setFilterData }) => {
           name="filterBy"
           id="filter"
           className="p-2 appearance-none bg-transparent outline-none cursor-pointer"
-          defaultValue="none"
           value={filterData.filterBy}
           onChange={handleFilterChange}
         >
