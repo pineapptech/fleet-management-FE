@@ -86,7 +86,7 @@ For example:
 5. **Delete Vehicle Info;** To delete the information of a particular vehicle.
 
 ## FLEET ALLOCATION
-In the fleet allocation section, it consists of the allocate vehicles button at the top which is used to allocate vehicles. On clicking on the button, the allocate vehicles form would pop up. The form must be filled before a vehicle is being allocated to the recipient. In the form requirements consists of;
+In the fleet allocation section, it consists of the allocate vehicles button at the top which is used to allocate vehicles. On clicking on the button, the allocate vehicles form would pop up. The form must be filled before a vehicle is being allocated to the recipient. The form requirements consists of;
 
 1. Vehicle ID
 2. Vehicle Plate Number ID
@@ -106,7 +106,46 @@ In the fleet allocation section, it consists of the allocate vehicles button at 
 
 After filling all the necessary requirements, then click on the save and update button and a modal would pop up showing that your vehicle allocation was successful and the Vehicle ID would show in the pop up notification that it has been saved and updated. You can either cancel the pop up notification to remove the it or you can click on the back to dashboard link to take you back to the dashboard.
 
-The Fleet Allocation section also has an Assign Vehicle button where you can assign vehicles to a driver  for a specific task. When you assign a vehicle, you are actively selecting which vehicle will be used for a specific purpose.
+The Fleet Allocation section  has an Allocate vehicle button where you can see your recent allocation data and  an Assign Vehicle button where you can assign vehicles to a driver  for a specific task. When you assign a vehicle, you are actively selecting which vehicle will be used for a specific purpose.
+
+The Allocate Vehicles button, When clicked, shows a table that consists of the Recent Allocation data.
+The Recent Allocation table consists of;
+
+- S/N (Serial Number)
+- Recipient Name
+- Vehicle ID
+- Vehicle Type
+- Vehicle Color
+- Make/Model
+- Engine Number
+- Action
+
+When you click on the Assign vehicles, it takes you to the assign vehicles page. It shows at the top an Assign vehicle button and when clicked, it pops up the assign vehicles form.
+The Assign Vehicle form consists of;
+1. Vehicle ID
+2. Vehicle Plate Number ID
+3. Vehicle Type
+4. Vehicle Color
+5. Vehicle Make/Model
+6. Vehicle Engine Number
+7. Name of Driver/Recipient
+8. Position of government occupied by the recipient
+9. Recipient/Driver's Contact
+10. Recipient/Driver's mode of ID with options of the Civil service ID, Voters card,  NIN, and International passport
+11. Recipient/Driver's ID where you will upload the mode of Recipient ID you selected.
+12. Vehicle Status
+13. All vehicle particulars have been given to the recipient? with the options of Yes, No and Pending.
+14. Responsible Officer
+15. Date of Order
+16. Time of Order
+17. Start Location
+18. Approved Destination
+19. Approved Allowance
+
+After filling the form with all the necessary requirements, proceed to save and update.
+
+
+
 
 
 
