@@ -36,7 +36,7 @@ const vehicleSummaries = [
 
 const VehicleSummary = () => {
   return (
-    <div className="card-wrapper flex gap-4 flex-wrap justify-center mb-8">
+    <div className="card-wrapper flex gap-4 flex-wrap justify-center mb-6">
       {vehicleSummaries.map(({ title, count, fg, bg }) => (
         <div
           key={title + count}
