@@ -11,7 +11,7 @@ const Button = React.forwardRef(
     return (
       <button
         className={twMerge(
-          "inline-block p-2 rounded-md hover:scale-105 active:scale-100 transition-transform",
+          "flex justify-center items-center gap-2 p-2 rounded-md hover:scale-105 active:scale-100 transition-transform",
           variantStyles[variant],
           className
         )}
